@@ -2,6 +2,20 @@ package main
 
 import "fmt"
 
+func variable() {
+
+	// equivalent var short string = "short"
+	// Only available inside a function
+	short := "short"
+	fmt.Println(short)
+
+	var num int = 1
+	num1 := 2
+	fmt.Println(num)
+	fmt.Println(num1)
+
+}
+
 func typeValue() {
 	fmt.Println("go" + "lang")
 	fmt.Println("1+1 =", 1+1)
@@ -14,4 +28,5 @@ func typeValue() {
 func main() {
 	fmt.Println("Hello, World!")
 	typeValue()
+	variable()
 }
