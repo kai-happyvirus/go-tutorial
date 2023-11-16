@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func main() {
+	forLoop()
+	ifElse()
+}
+func forLoop() {
 	i := 1
 
 	for i <= 3 {
@@ -25,5 +29,16 @@ func main() {
 			continue
 		}
 		fmt.Println(n)
+	}
+}
+
+func ifElse() {
+
+	if num := 9; num < 0 {
+		fmt.Println(num, "is negative")
+	} else if num < 10 {
+		fmt.Println(num, "has 1 digit")
+	} else {
+		fmt.Println(num, "has multiple digits")
 	}
 }
