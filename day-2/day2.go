@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	forLoop()
@@ -26,12 +29,32 @@ func switchStatement() {
 	// This is a clean way to write long if-then-else chains.
 	switch {
 	case i == 1:
-		fmt.Println("one")
+		fmt.Println("1")
 	case i == 2:
-		fmt.Println("two")
+		fmt.Println("2")
 	default:
 		fmt.Println("number")
 	}
+
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("It's before noon")
+	default:
+		fmt.Println("It's after noon")
+	}
+
+	whatAmI := func(i interface{}) {
+		switch t := i.(type) {
+		case bool:
+			fmt.Println("I'm a bool")
+		case int:
+			fmt.Println("I'm an int")
+		default:
+			fmt.Printf("Don't know type %T\n", t)
+		}
+	}
+	whatAmI(true)
 }
 func forLoop() {
 	i := 1
