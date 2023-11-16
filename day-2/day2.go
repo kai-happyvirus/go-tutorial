@@ -5,6 +5,33 @@ import "fmt"
 func main() {
 	forLoop()
 	ifElse()
+	switchStatement()
+}
+
+func switchStatement() {
+	i := 2
+	fmt.Print("Write ", i, " as ")
+	switch i {
+	case 1:
+		fmt.Println("one")
+		// Multiple expressions in the same case statement
+	case 2, 3, 4:
+		fmt.Println("two")
+	default:
+		fmt.Println("number")
+	}
+
+	// Switch without an expression is an alternate way to express if/else logic.
+	// Here we also show how the case expressions can be non-constants.
+	// This is a clean way to write long if-then-else chains.
+	switch {
+	case i == 1:
+		fmt.Println("one")
+	case i == 2:
+		fmt.Println("two")
+	default:
+		fmt.Println("number")
+	}
 }
 func forLoop() {
 	i := 1
