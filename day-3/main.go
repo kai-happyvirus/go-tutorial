@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"math"
-	"github.com/kai-happyvirus/go-tutorial/day-3"
+
+	"github.com/kai-happyvirus/go-tutorial/day-3/functions"
 )
 
 func main() {
@@ -35,7 +36,7 @@ func main() {
 	fmt.Println(defaultName)
 	numberConstant()
 	price, no := 90, 6
-	var totalPrice = calculateBill(price, no)
+	totalPrice := functions.CalculateBill(price, no)
 	fmt.Println("Total price is", totalPrice)
 }
 
