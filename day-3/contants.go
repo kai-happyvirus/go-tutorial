@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
+	"github.com/kai-happyvirus/go-tutorial/day-3"
 )
 
 func main() {
@@ -33,7 +34,13 @@ func main() {
 	fmt.Println(customName)
 	fmt.Println(defaultName)
 	numberConstant()
+	price, no := 90, 6
+	var totalPrice = calculateBill(price, no)
+	fmt.Println("Total price is", totalPrice)
+}
 
+func calculateBill(price, no int) {
+	panic("unimplemented")
 }
 
 func numberConstant() {
