@@ -19,6 +19,12 @@ func main() {
 	nums := []int{1, 2, 3, 4}
 
 	variadicFunctions(nums...)
+	nextInt := closures()
+
+	fmt.Println(nextInt())
+	fmt.Println(nextInt())
+	newInts := closures()
+	fmt.Println(newInts())
 }
 
 func variadicFunctions(nums ...int) {
@@ -29,4 +35,12 @@ func variadicFunctions(nums ...int) {
 		total += num
 	}
 	fmt.Println(total)
+}
+
+func closures() func() int {
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
 }
