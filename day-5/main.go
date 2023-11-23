@@ -23,6 +23,15 @@ func main() {
 		return fib(n-1) + fib(n-2)
 	}
 	fmt.Println(fib(7))
+	i := 1
+	fmt.Println("initial:", i)
+	zeroval(i)
+	fmt.Println("zeroval:", i)
+
+	zeroptr(&i)
+	fmt.Println("zeroptr:", i)
+
+	fmt.Println("pointer:", &i)
 }
 
 func intSeq() func() int {
@@ -38,4 +47,12 @@ func recursion(n int) int {
 		return 1
 	}
 	return n * recursion(n-1)
+}
+
+func zeroval(ival int) {
+	ival = 0
+}
+
+func zeroptr(iptr *int) {
+	*iptr = 0
 }
