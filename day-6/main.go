@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
-
+	
+import (
+	"fmt"
+	"math"
+)
 type person struct {
 	name string
 	age  int
@@ -79,3 +82,4 @@ func methods() {
 	fmt.Println("area: ", rp.area())
 	fmt.Println("perim:", rp.perim())
 }
+
